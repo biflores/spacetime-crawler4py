@@ -1,5 +1,7 @@
 import re
 from urllib.parse import urlparse
+from urllib.request import urlopen
+import BeautifulSoup
 
 def scraper(url, resp):
     links = extract_next_links(url, resp)
@@ -7,7 +9,20 @@ def scraper(url, resp):
 
 def extract_next_links(url, resp):
     # Implementation requred.
-    return list()
+    new_urls = []
+    html_page = urlopen.open(url)
+    soup = BeautifulSoup.BeautifulSoup(html_page)
+    for link in soup.findAll('a'):
+        new_urls.append(link.get('href'))
+    return new_urls
+
+# TODO: move to another file 
+# this function is to get started on the code for the deliverables
+def extract_text(url):
+    html_page = urlopen.open(url)
+    soup = BeautifulSoup.BeautifulSoup(html_page)
+    return soup.findAll(text=True)
+
 
 def is_valid(url):
     try:
