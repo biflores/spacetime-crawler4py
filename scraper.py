@@ -10,8 +10,8 @@ def scraper(url, resp):
 def extract_next_links(url, resp):
     # Implementation requred.
     new_urls = []
-    html_page = urlopen.open(url)
-    soup = BeautifulSoup.BeautifulSoup(html_page)
+    html_page = urlopen(url)
+    soup = BeautifulSoup(html_page)
     for link in soup.findAll('a'):
         new_urls.append(link.get('href'))
     return new_urls
@@ -20,7 +20,7 @@ def extract_next_links(url, resp):
 # this function is to get started on the code for the deliverables
 def extract_text(url):
     html_page = urlopen.open(url)
-    soup = BeautifulSoup.BeautifulSoup(html_page)
+    soup = BeautifulSoup(html_page)
     return soup.findAll(text=True)
 
 
