@@ -1,13 +1,8 @@
 # TODO:
-- making sure that the crawler into traps
-- it doesn't revisit pages  ### 3 history   isabel
+- report (tokenizer, common words, longest page, number of subdomains)  # 1 jericho
 - respect robot.txt ## 2 mandy
 - go through links in robot.txt ## 2 mandy
-- honor politeness delay for each site
-- crawl only pages with high textual info content
-- avoid similar pages with no info
-- avoid large files with low info value
-- report (tokenizer, common words, longest page, number of subdomains)  # 1 jericho
+- it doesn't revisit pages  ### 3 history   isabel
 - avoid dead URLs that return 200 status    #### 4  cedric
 - take care of HTTP error 403   #### 4  cedric
 Exception in thread Thread-1:
@@ -33,3 +28,13 @@ Traceback (most recent call last):
   File "/usr/lib64/python3.6/urllib/request.py", line 650, in http_error_default
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 403: Forbidden
+
+
+
+ALL: 
+- making sure that the crawler into traps
+- honor politeness delay for each site
+- crawl only pages with high textual info content
+- avoid similar pages with no info
+- avoid large files with low info value
+- figure out how to store text

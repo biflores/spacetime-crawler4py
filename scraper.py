@@ -24,7 +24,7 @@ def extract_next_links(url, resp):
 # TODO: move to another file 
 # this function is to get started on the code for the deliverables
 def extract_text(url):
-    html_page = urlopen.open(url)
+    html_page = urlopen(url)
     soup = BeautifulSoup(html_page)
     return soup.findAll(text=True)
 
